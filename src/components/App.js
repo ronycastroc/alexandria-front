@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import GlobalStyle from "../assets/style/GlobalStyle";
 import Home from "./Pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Teste from "./Pages/teste";
 
 export default function App() {
   return (
@@ -10,12 +10,14 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cadastro" element={<></>} />
-          <Route path="/login" element={<Home />} />
-          <Route path="/contato" element={<Home />} />
+          <Route path="/cadastro" element={<Teste />} />
+          <Route path="/login" element={<Teste />} />
+          <Route path="/sobrenos" element={<Teste />} />
+          <Route path="/carrinho" element={<Teste />} />
+          <Route path="/categorias" element={<Teste />} />
+          <Route path="/contato" element={<Teste />} />
         </Routes>
       </BrowserRouter>
-      <Home />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { IoBookSharp, IoCartOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   function navigateHome() {
@@ -14,7 +15,7 @@ export default function Header() {
           value={{
             color: "#FFFFFF",
             className: "global-class-name",
-            size: "55px",
+            size: "60px",
           }}
         >
           <div>
@@ -27,27 +28,35 @@ export default function Header() {
         </div>
       </LogoContainer>
       <InfoContainer>
-        <h2>Sobre nós</h2>
-        <h2>Categorias</h2>
-        <h2>Contato</h2>
+        <Link to="/sobrenos">
+          <h2>Sobre nós</h2>
+        </Link>
+        <Link to="/categorias">
+          <h2>Categorias</h2>
+        </Link>
+        <Link to="/contato">
+          <h2>Contato</h2>
+        </Link>
       </InfoContainer>
       <LoginCartContainer>
-        <CartContainer>
-          <IconContext.Provider
-            value={{
-              color: "#FFFFFF",
-              className: "global-class-name",
-              size: "35px",
-            }}
-          >
-            <div>
-              <IoCartOutline />
-              <CartNumber>{0}</CartNumber>
-            </div>
-          </IconContext.Provider>
-        </CartContainer>
+        <Link to="/carrinho">
+          <CartContainer>
+            <IconContext.Provider
+              value={{
+                color: "#FFFFFF",
+                className: "global-class-name",
+                size: "35px",
+              }}
+            >
+              <div>
+                <IoCartOutline />
+                <CartNumber>{0}</CartNumber>
+              </div>
+            </IconContext.Provider>
+          </CartContainer>
+        </Link>
         <LoginButton>
-          <h2>Login</h2>
+          <Link to="/login">Login</Link>
         </LoginButton>
       </LoginCartContainer>
     </Wrapper>
@@ -103,7 +112,7 @@ const InfoContainer = styled.div`
   width: 500px;
   cursor: pointer;
   h2 {
-    font-size: 15px;
+    font-size: 17px;
     color: #ffffff;
     &:hover {
       font-size: 20px;
@@ -133,6 +142,10 @@ const CartNumber = styled.div`
   height: 20px;
   color: #ffffff;
   font-size: 10px;
+  &:hover {
+    top: 0;
+    background-color: #902923;
+  }
 `;
 
 const LoginCartContainer = styled.div`
@@ -146,10 +159,16 @@ const LoginCartContainer = styled.div`
 const LoginButton = styled.div`
   width: 80px;
   height: 30px;
-  background-color: #902923;
-  color: #ffffff;
+  background-color: #a22c29;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: #902923;
+  }
+  a {
+    color: #ffffff !important;
+  }
 `;
