@@ -53,6 +53,7 @@ table {
 
 body {
 	font-family: 'Roboto', sans-serif;
+	background-color: #D6D5C9;
 }
 `
 export default GlobalStyle;
