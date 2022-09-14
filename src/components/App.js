@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import GlobalStyle from '../assets/style/GlobalStyle'
+import Home from './Pages/Home'
 
 export default function App() {
     return (
         <>
             <GlobalStyle />
-            <Title>Hello World!!!</Title>
+            <Home />
         </>
     )
 }
