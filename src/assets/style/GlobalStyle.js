@@ -48,8 +48,13 @@ table {
 
 * {
 	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 
-`;
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+`
 
 export default GlobalStyle;
