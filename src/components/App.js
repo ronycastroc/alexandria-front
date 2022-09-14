@@ -1,24 +1,21 @@
-import styled from 'styled-components'
-import GlobalStyle from '../assets/style/GlobalStyle'
-import Home from './Pages/Home'
+import styled from "styled-components";
+import GlobalStyle from "../assets/style/GlobalStyle";
+import Home from "./Pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
-    return (
-        <>
-            <GlobalStyle />
-            <Home />
-        </>
-    )
+  return (
+    <>
+      <GlobalStyle />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cadastro" element={<></>} />
+          <Route path="/login" element={<Home />} />
+          <Route path="/contato" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+      <Home />
+    </>
+  );
 }
-
-const Title = styled.h1`
-    font-size: 100px;
-    transition: linear 1s;
-    cursor: pointer;
-
-    :active {
-        font-size: 200px;
-        color: green;      
-    }   
-
-`

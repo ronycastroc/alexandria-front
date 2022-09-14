@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	overflow-x: hidden ;
 }
 ol, ul {
 	list-style: none;
@@ -55,5 +56,5 @@ body {
 	font-family: 'Roboto', sans-serif;
 	background-color: #D6D5C9;
 }
-`
+`;
 export default GlobalStyle;

@@ -31,20 +31,25 @@ export default function Header() {
         <h2>Categorias</h2>
         <h2>Contato</h2>
       </InfoContainer>
-      <CartContainer>
-        <IconContext.Provider
-          value={{
-            color: "#FFFFFF",
-            className: "global-class-name",
-            size: "35px",
-          }}
-        >
-          <div>
-            <IoCartOutline />
-            <CartNumber>{0}</CartNumber>
-          </div>
-        </IconContext.Provider>
-      </CartContainer>
+      <LoginCartContainer>
+        <CartContainer>
+          <IconContext.Provider
+            value={{
+              color: "#FFFFFF",
+              className: "global-class-name",
+              size: "35px",
+            }}
+          >
+            <div>
+              <IoCartOutline />
+              <CartNumber>{0}</CartNumber>
+            </div>
+          </IconContext.Provider>
+        </CartContainer>
+        <LoginButton>
+          <h2>Login</h2>
+        </LoginButton>
+      </LoginCartContainer>
     </Wrapper>
   );
 }
@@ -68,6 +73,7 @@ const LogoContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   div {
     display: flex;
@@ -95,9 +101,13 @@ const InfoContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 500px;
+  cursor: pointer;
   h2 {
     font-size: 15px;
     color: #ffffff;
+    &:hover {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -106,14 +116,14 @@ const CartContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding-top: 15px;
   position: relative;
+  cursor: pointer;
 `;
 
 const CartNumber = styled.div`
   position: absolute;
   background-color: #a22c29;
-  top: 25%;
+  top: 5%;
   right: -10%;
   border-radius: 50%;
   display: flex;
@@ -123,4 +133,23 @@ const CartNumber = styled.div`
   height: 20px;
   color: #ffffff;
   font-size: 10px;
+`;
+
+const LoginCartContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+`;
+
+const LoginButton = styled.div`
+  width: 80px;
+  height: 30px;
+  background-color: #902923;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
 `;
