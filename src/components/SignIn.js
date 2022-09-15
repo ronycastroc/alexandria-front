@@ -1,10 +1,40 @@
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { postSignIn } from "../service/alexandriaService";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
 
 export default function SignIn() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-    function sendForm() {
-        alert('oi');
+    const navigate = useNavigate();
+
+    function sendForm(e) {
+        e.preventDefault();
+
+        const body = {
+            email,
+            password
+        }
+
+        postSignIn(body)
+        .then(res => {
+            resetForm();
+            localStorage.setItem('name', JSON.stringify(res.data.name));
+            localStorage.setItem('token', JSON.stringify(res.data.token));
+            navigate('/');
+        })
+        .catch(() => {
+            resetForm();
+            alert('Seu email ou senha estão incorretos, digite novamente.');
+            
+        })
+    }
+
+    function resetForm() {
+        setEmail('');
+        setPassword('');
     }
 
     return (
@@ -15,10 +45,18 @@ export default function SignIn() {
             <form onSubmit={sendForm}>
                 <FormContent>
                     <h2>Insira o seu Email</h2>      
-                    <input type="email" name="email" placeholder="Email" />
+                    <input type="email" name="email" placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    />
 
                     <h2>Insira a sua Senha</h2>
-                    <input type="password" name="password" placeholder="Senha" />
+                    <input type="password" name="password" placeholder="Senha" 
+                    value={password}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    />
 
                     <button>Login</button>
                 </FormContent>
@@ -42,7 +80,7 @@ const AuthBox = styled.div`
     border-radius: 5px;
     box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.2);
     width: 50vw;
-    height: 80vh;
+    min-height: 80vh;
 
     @media (max-width: 650px) {
         width: 90vw;
@@ -58,13 +96,14 @@ const AuthBox = styled.div`
 
     h2 {
         margin-bottom: 5px;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     p {
         margin-top: 10px;
         font-size: 1rem;
         text-align: center;
+        margin-bottom: 100px;
     }
 
     span {
@@ -84,7 +123,7 @@ const FormContent = styled.div`
     margin: 0 auto;
 
     input {
-        height: 50px;
+        height: 45px;
         margin-bottom: 10px;
         border-radius: 5px;
         border-width: 1px;
@@ -122,4 +161,6 @@ const FormContent = styled.div`
     }
 
 `;
+
+export { AuthBox, FormContent }
 
