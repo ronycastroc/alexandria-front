@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <Header></Header>
+      <Header />
       <Container>
         <h1>Nosso acervo</h1>
         <Carousel>
@@ -77,8 +77,9 @@ export default function Home() {
             </IconContext.Provider>
           </CarouselButton>
         </Carousel>
-        <Footer />
+        {/* <Footer /> */}
       </Container>
+      <Footer />
     </Wrapper>
   );
 }
