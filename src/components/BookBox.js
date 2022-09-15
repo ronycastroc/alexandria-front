@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 export default function BookBox({ author, title, cover, id, price }) {
   const navigate = useNavigate();
-  
+
   return (
-    <Wrapper onClick={() => navigate("/books")}>
+    <Wrapper onClick={() => navigate(`/product/${id}`)}>
       <img src={cover} alt="coverImg" />
       <BookInfo>
         <h1>{title}</h1>

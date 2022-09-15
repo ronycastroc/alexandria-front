@@ -58,7 +58,7 @@ export default function Home() {
                 author={product.author}
                 title={product.title}
                 cover={product.cover}
-                id={product.id}
+                id={product._id}
                 price={product.price}
               />
             ))}
