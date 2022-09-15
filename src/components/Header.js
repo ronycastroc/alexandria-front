@@ -159,14 +159,17 @@ const LoginCartContainer = styled.div`
 const LoginButton = styled.div`
   width: 80px;
   height: 30px;
-  background-color: #a22c29;
+  background: linear-gradient(to left, #A22C29 50%, #902923 50%) right;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 15px;
   cursor: pointer;
+  transition: .5s ease-out;
+  background-size: 200%;
+
   &:hover {
-    background-color: #902923;
+    background-position: left;
   }
   a {
     color: #ffffff !important;
