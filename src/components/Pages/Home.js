@@ -4,6 +4,7 @@ import { IoChevronForwardSharp, IoChevronBackSharp } from "react-icons/io5";
 import { IconContext } from "react-icons";
 import { useRef, useCallback } from "react";
 import BookBox from "../BookBox";
+import Footer from "../Footer";
 
 export default function Home() {
   const carousel = useRef(null);
@@ -65,6 +66,7 @@ export default function Home() {
             </IconContext.Provider>
           </CarouselButton>
         </Carousel>
+        <Footer />
       </Container>
     </Wrapper>
   );
