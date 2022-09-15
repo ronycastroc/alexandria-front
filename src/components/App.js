@@ -5,23 +5,29 @@ import Teste from "./Pages/teste";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import BookPage from "./Pages/BookPage";
+import UserContext from "../context/UserContext.js";
+import { useState } from "react";
 
 export default function App() {
+  const [cartItens, setCartItens] = useState([]);
+
   return (
     <>
       <GlobalStyle />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/sobrenos" element={<Teste />} />
-          <Route path="/product/:bookId" element={<BookPage />} />
-          <Route path="/carrinho" element={<Teste />} />
-          <Route path="/categorias" element={<Teste />} />
-          <Route path="/contato" element={<Teste />} />
-        </Routes>
-      </BrowserRouter>
+      <UserContext.Provider value={{ cartItens, setCartItens }}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/sobrenos" element={<Teste />} />
+            <Route path="/product/:bookId" element={<BookPage />} />
+            <Route path="/carrinho" element={<Teste />} />
+            <Route path="/categorias" element={<Teste />} />
+            <Route path="/contato" element={<Teste />} />
+          </Routes>
+        </BrowserRouter>
+      </UserContext.Provider>
     </>
   );
 }

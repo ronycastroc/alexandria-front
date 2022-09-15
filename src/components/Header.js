@@ -2,9 +2,22 @@ import styled from "styled-components";
 import { IoBookSharp, IoCartOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
 import { Link, useNavigate } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import UserContext from "../context/UserContext";
 
 export default function Header() {
   const navigate = useNavigate();
+  const { cartItens, setCartItens } = useContext(UserContext);
+
+  //localStorage.removeItem("CART")
+
+  useEffect(() => {
+    const localStorageCartItens = JSON.parse(localStorage.getItem("CART"));
+
+    if (localStorageCartItens !== null) {
+      setCartItens(localStorageCartItens);
+    }
+  }, [setCartItens, cartItens]);
 
   return (
     <Wrapper>
@@ -48,7 +61,7 @@ export default function Header() {
             >
               <div>
                 <IoCartOutline />
-                <CartNumber>{0}</CartNumber>
+                <CartNumber>{cartItens.length}</CartNumber>
               </div>
             </IconContext.Provider>
           </CartContainer>

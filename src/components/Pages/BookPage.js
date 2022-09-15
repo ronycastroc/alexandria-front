@@ -1,20 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { getProductWithID } from "../../service/alexandriaService.js";
 import styled from "styled-components";
 import Header from "../Header.js";
 import Footer from "../Footer.js";
+import UserContext from "../../context/UserContext.js";
 
 export default function BookPage() {
   const params = useParams();
   const [bookData, setbookData] = useState({});
+  const { cartItens, setCartItens } = useContext(UserContext);
+
+  console.log(cartItens)
 
   function addBookToCart() {
-    const cartItens = JSON.parse(localStorage.getItem("CART"));
-    if (cartItens !== null) {
+    const localCartItens = JSON.parse(localStorage.getItem("CART"));
+    if (localCartItens !== null) {
       const newCart = [...cartItens, bookData];
+      setCartItens(newCart);
       localStorage.setItem("CART", JSON.stringify(newCart));
     } else {
+      setCartItens([...cartItens, bookData]);
       localStorage.setItem("CART", JSON.stringify([bookData]));
     }
   }
@@ -23,7 +29,6 @@ export default function BookPage() {
     window.scrollTo(0, 0);
     getProductWithID(params.bookId)
       .then((res) => {
-        console.log(res.data);
         setbookData(res.data);
       })
       .catch((err) => {

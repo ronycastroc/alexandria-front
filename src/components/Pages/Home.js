@@ -19,9 +19,9 @@ export default function Home() {
       })
       .catch((err) => {
         console.error(err.message);
-        //alert("Erro ao buscar os produtos da API");
+        alert("Erro ao buscar os produtos da API");
       });
-  }, [getProductsFromAPI]);
+  }, []);
 
   const handleLeftClick = useCallback((e) => {
     e.preventDefault();
