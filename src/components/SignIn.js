@@ -54,7 +54,7 @@ export default function SignIn() {
                     <h2>Insira a sua Senha</h2>
                     <input type="password" name="password" placeholder="Senha" 
                     value={password}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                     />
 
