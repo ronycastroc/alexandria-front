@@ -1,16 +1,14 @@
 import styled from "styled-components";
 import { IoBookSharp, IoCartOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header() {
-  function navigateHome() {
-    return "ola";
-  }
+  const navigate = useNavigate();
 
   return (
     <Wrapper>
-      <LogoContainer onClick={() => navigateHome()}>
+      <LogoContainer onClick={() => navigate("/")}>
         <IconContext.Provider
           value={{
             color: "#FFFFFF",
@@ -56,7 +54,7 @@ export default function Header() {
           </CartContainer>
         </Link>
         <LoginButton>
-          <Link to="/login">Login</Link>
+          <Link to="/signin">Login</Link>
         </LoginButton>
       </LoginCartContainer>
     </Wrapper>
@@ -127,7 +125,7 @@ const CartContainer = styled.div`
   justify-content: space-around;
   position: relative;
   cursor: pointer;
-  &:hover{
+  &:hover {
     margin-bottom: 5px;
   }
 `;

@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { postSignUp } from "../service/alexandriaService";
+import { postSignUp } from "../../service/alexandriaService";
 import { AuthBox, FormContent } from "./SignIn";
 
 export default function SignUp() {

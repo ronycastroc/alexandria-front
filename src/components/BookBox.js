@@ -1,18 +1,16 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
-export default function BookBox() {
+export default function BookBox({ author, title, cover, id, price }) {
   const navigate = useNavigate();
+  
   return (
     <Wrapper onClick={() => navigate("/books")}>
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/81SWBRKfExL.jpg"
-        alt="coverImg"
-      />
+      <img src={cover} alt="coverImg" />
       <BookInfo>
-        <h1>O senhor dos Anéis</h1>
-        <h2>J.R.R. Tolkien</h2>
-        <p>R$ 40,00</p>
+        <h1>{title}</h1>
+        <h2>{author}</h2>
+        <p>{price}</p>
       </BookInfo>
     </Wrapper>
   );

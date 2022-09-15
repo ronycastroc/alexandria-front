@@ -2,8 +2,8 @@ import GlobalStyle from "../assets/style/GlobalStyle";
 import Home from "./Pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Teste from "./Pages/teste";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
 
 export default function App() {
   return (

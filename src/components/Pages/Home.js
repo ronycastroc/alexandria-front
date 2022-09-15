@@ -2,12 +2,26 @@ import styled from "styled-components";
 import Header from "../Header";
 import { IoChevronForwardSharp, IoChevronBackSharp } from "react-icons/io5";
 import { IconContext } from "react-icons";
-import { useRef, useCallback } from "react";
+import { useRef, useCallback, useEffect, useState } from "react";
 import BookBox from "../BookBox";
 import Footer from "../Footer";
+import { getProductsFromAPI } from "../../service/alexandriaService";
 
 export default function Home() {
   const carousel = useRef(null);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getProductsFromAPI()
+      .then((res) => {
+        setProducts(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.error(err.message);
+        //alert("Erro ao buscar os produtos da API");
+      });
+  }, [getProductsFromAPI]);
 
   const handleLeftClick = useCallback((e) => {
     e.preventDefault();
@@ -39,18 +53,15 @@ export default function Home() {
             </IconContext.Provider>
           </CarouselButton>
           <BooksContainer ref={carousel}>
-            <div>
-              <BookBox />
-            </div>
-            <div>
-              <BookBox />
-            </div>
-            <div>
-              <BookBox />
-            </div>
-            <div>
-              <BookBox />
-            </div>
+            {products.map((product) => (
+              <BookBox
+                author={product.author}
+                title={product.title}
+                cover={product.cover}
+                id={product.id}
+                price={product.price}
+              />
+            ))}
           </BooksContainer>
           <CarouselButton onClick={(e) => handleRightClick(e)}>
             <IconContext.Provider
