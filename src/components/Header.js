@@ -127,6 +127,9 @@ const CartContainer = styled.div`
   justify-content: space-around;
   position: relative;
   cursor: pointer;
+  &:hover{
+    margin-bottom: 5px;
+  }
 `;
 
 const CartNumber = styled.div`
@@ -142,10 +145,6 @@ const CartNumber = styled.div`
   height: 20px;
   color: #ffffff;
   font-size: 10px;
-  &:hover {
-    top: 0;
-    background-color: #902923;
-  }
 `;
 
 const LoginCartContainer = styled.div`
@@ -159,13 +158,13 @@ const LoginCartContainer = styled.div`
 const LoginButton = styled.div`
   width: 80px;
   height: 30px;
-  background: linear-gradient(to left, #A22C29 50%, #902923 50%) right;
+  background: linear-gradient(to left, #a22c29 50%, #902923 50%) right;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 15px;
   cursor: pointer;
-  transition: .5s ease-out;
+  transition: 0.5s ease-out;
   background-size: 200%;
 
   &:hover {
