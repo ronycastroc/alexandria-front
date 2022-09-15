@@ -1,23 +1,18 @@
-import styled from 'styled-components'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GlobalStyle from '../assets/style/GlobalStyle'
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 
 export default function App() {
     return (
-        <>
+        <BrowserRouter>
+            
             <GlobalStyle />
-            <Title>Hello World!!!</Title>
-        </>
+                <Routes>
+                    <Route path='/signin' element={<SignIn />}/>
+                    <Route path='/signup' element={<SignUp />}/>
+                </Routes>
+
+        </BrowserRouter>
     )
 }
-
-const Title = styled.h1`
-    font-size: 100px;
-    transition: linear 1s;
-    cursor: pointer;
-
-    :active {
-        font-size: 200px;
-        color: green;      
-    }   
-
-`
