@@ -29,4 +29,14 @@ function getProductsFromAPI() {
   return promise;
 }
 
-export { postSignUp, postSignIn, getProductsFromAPI };
+function getProductWithID(id) {
+  const promise = axios.get(`${BASE_URL}/products/${id}`);
+  return promise;
+}
+
+function getProductWithCategory(category) {
+  const promise = axios.get(`${BASE_URL}/products/categories/${category}`);
+  return promise;
+}
+
+export { postSignUp, postSignIn, getProductsFromAPI, getProductWithID, getProductWithCategory };

@@ -19,9 +19,9 @@ export default function Home() {
       })
       .catch((err) => {
         console.error(err.message);
-        //alert("Erro ao buscar os produtos da API");
+        alert("Erro ao buscar os produtos da API");
       });
-  }, [getProductsFromAPI]);
+  }, []);
 
   const handleLeftClick = useCallback((e) => {
     e.preventDefault();
@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <Header></Header>
+      <Header />
       <Container>
         <h1>Nosso acervo</h1>
         <Carousel>
@@ -58,7 +58,7 @@ export default function Home() {
                 author={product.author}
                 title={product.title}
                 cover={product.cover}
-                id={product.id}
+                id={product._id}
                 price={product.price}
               />
             ))}
@@ -77,8 +77,8 @@ export default function Home() {
             </IconContext.Provider>
           </CarouselButton>
         </Carousel>
-        <Footer />
       </Container>
+      <Footer />
     </Wrapper>
   );
 }
