@@ -8,6 +8,8 @@ import BookPage from "./Pages/BookPage";
 import UserContext from "../context/UserContext.js";
 import Cart from "./Pages/Cart";
 import { useState } from "react";
+import AboutUs from "./Pages/AboutUs";
+import ContactsPage from "./Pages/ContactPage";
 
 export default function App() {
   const [cartItens, setCartItens] = useState([]);
@@ -21,11 +23,11 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/sobrenos" element={<Teste />} />
+            <Route path="/sobrenos" element={<AboutUs />} />
             <Route path="/product/:bookId" element={<BookPage />} />
             <Route path="/carrinho" element={<Cart />} />
             <Route path="/categorias" element={<Teste />} />
-            <Route path="/contato" element={<Teste />} />
+            <Route path="/contato" element={<ContactsPage />} />
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
