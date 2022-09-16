@@ -164,6 +164,7 @@ const LogoContainer = styled.div`
       font-size: 50px;
       color: #ffffff;
       font-weight: 700;
+      margin-top: 0px !important;
       margin-bottom: 0px !important;
     }
     p {
