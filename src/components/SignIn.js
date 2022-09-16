@@ -144,7 +144,7 @@ const FormContent = styled.div`
         border: none;
         width: 100px;
         height: 50px;
-        border-radius: 5px;
+        border-radius: 50px;
         bottom: 40px;
         right: 40px;
         color: #D6D5C9;
