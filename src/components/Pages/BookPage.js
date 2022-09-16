@@ -5,13 +5,12 @@ import styled from "styled-components";
 import Header from "../Header.js";
 import Footer from "../Footer.js";
 import UserContext from "../../context/UserContext.js";
+import SmallCarousel from "../SmallCarousel.js";
 
 export default function BookPage() {
   const params = useParams();
   const [bookData, setbookData] = useState({});
   const { cartItens, setCartItens } = useContext(UserContext);
-
-  console.log(cartItens)
 
   function addBookToCart() {
     const localCartItens = JSON.parse(localStorage.getItem("CART"));
@@ -54,6 +53,8 @@ export default function BookPage() {
           </ButtonsContainer>
         </BookInfo>
       </Container>
+      <h1>Veja mais livros desta categoria:</h1>
+      <SmallCarousel category={bookData.category} />
       <Footer />
     </Wrapper>
   );
@@ -64,6 +65,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
 `;
 
 const Container = styled.div`
@@ -75,7 +81,7 @@ const Container = styled.div`
   height: 500px;
   background-color: #a22c29;
   margin-top: 150px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   box-shadow: 0px 2px 47px 5px rgba(0, 0, 0, 0.1);
 `;
 

@@ -77,7 +77,6 @@ export default function Home() {
             </IconContext.Provider>
           </CarouselButton>
         </Carousel>
-        {/* <Footer /> */}
       </Container>
       <Footer />
     </Wrapper>

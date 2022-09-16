@@ -106,10 +106,13 @@ const LogoContainer = styled.div`
       font-family: "Qwitcher Grypen", cursive !important;
       font-size: 50px;
       color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 0px !important;
     }
     p {
       font-size: 10px;
       color: #ffffff;
+      font-weight: 700;
       margin-bottom: 10px;
     }
   }
