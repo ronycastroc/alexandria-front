@@ -46,8 +46,8 @@ export default function SmallCarousel({ category }) {
         </IconContext.Provider>
       </CarouselButton>
       <BooksContainer ref={carousel}>
-        {products.map((product) => (
-          <div>
+        {products.map((product, index) => (
+          <div key={index}>
             <img src={product.cover} alt="bookCover" />
           </div>
         ))}
