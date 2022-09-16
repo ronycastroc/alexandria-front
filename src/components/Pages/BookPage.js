@@ -40,19 +40,20 @@ export default function BookPage() {
     <Wrapper>
       <Header />
       <Container>
-        <BookCover>
-          <img src={bookData.cover} alt="BookCover" />
-        </BookCover>
-        <BookInfo>
-          <h1>{bookData.title}</h1>
-          <p>{bookData.author}</p>
-          <h2>{bookData.price}</h2>
-          <ButtonsContainer>
-            <button onClick={addBookToCart}>Adicionar ao carrinho</button>
-            <div>i</div>
-          </ButtonsContainer>
-        </BookInfo>
-      </Container>
+          <BookCover>
+            <img src={bookData.cover} alt="BookCover" />
+          </BookCover>
+          <BookInfo>
+            <h1>{bookData.title}</h1>
+            <p>{bookData.author}</p>
+            <h2>{bookData.price}</h2>
+            <ButtonsContainer>
+              <button onClick={addBookToCart}>Adicionar ao carrinho</button>
+              <div>i</div>
+            </ButtonsContainer>
+          </BookInfo>
+        </Container>      
+
       <h1>Veja mais livros desta categoria:</h1>
       <SmallCarousel category={bookData.category} />
       <Footer />
@@ -79,10 +80,10 @@ const Container = styled.div`
   justify-content: flex-start;
   width: 1000px;
   height: 500px;
-  background-color: #a22c29;
+  background-image: linear-gradient( to top, black, #902923, #a22c29 );
   margin-top: 150px;
   margin-bottom: 50px;
-  box-shadow: 0px 2px 47px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 47px 5px rgba(0, 0, 0, 0.5);
 `;
 
 const BookCover = styled.div`

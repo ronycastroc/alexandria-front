@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { IoBookSharp, IoCartOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
 import { Link, useNavigate } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import UserContext from "../context/UserContext";
 
 export default function Header() {
   const navigate = useNavigate();
   const { cartItens, setCartItens } = useContext(UserContext);
+  const [ categoriesBar, setCategoriesBar ] = useState(false);
+  
 
   //localStorage.removeItem("CART")
 
@@ -17,7 +19,7 @@ export default function Header() {
     if (localStorageCartItens !== null) {
       setCartItens(localStorageCartItens);
     }
-  }, [setCartItens, cartItens]);
+  }, [setCartItens]);
 
   return (
     <Wrapper>
@@ -42,9 +44,9 @@ export default function Header() {
         <Link to="/sobrenos">
           <h2>Sobre nós</h2>
         </Link>
-        <Link to="/categorias">
-          <h2>Categorias</h2>
-        </Link>
+        
+          <h2 onClick={() => setCategoriesBar(!categoriesBar)}>Categorias</h2>
+      
         <Link to="/contato">
           <h2>Contato</h2>
         </Link>
@@ -70,6 +72,27 @@ export default function Header() {
           <Link to="/signin">Login</Link>
         </LoginButton>
       </LoginCartContainer>
+      
+      <Categories categoriesBar={categoriesBar}>
+        <div>        
+        <Link to="/categorias/terror">          
+            <span>Terror</span>          
+        </Link>
+        <Link to="/categorias/fantasia">          
+            <span>Fantasia</span>          
+        </Link>
+        <Link to="/categorias/ficcaocientifica">          
+            <span>Ficção Cientifica</span>          
+        </Link>
+        <Link to="/categorias/romance">          
+            <span>Romance</span>          
+        </Link>
+        <Link to="/categorias/autoajuda">          
+            <span>Auto-ajuda</span>          
+        </Link>
+        </div>
+      </Categories>
+
     </Wrapper>
   );
 }
@@ -86,6 +109,40 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+`;
+
+const Categories = styled.div`
+  width: 70%;
+  height: ${props => props.categoriesBar === false ? ('0px') : ('50px')};
+  opacity: ${props => props.categoriesBar === false ? (0) : (1)};
+  transition: all 0.5s ease;
+  background-color: #0a100d;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border-bottom-left-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+  background-image: linear-gradient( to bottom, #0a100d, #D6D5C9 );
+  box-shadow: 0px 3px 10px #0a100d; 
+  
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+  }
+  span {    
+    color: #0a100d;
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
 `;
 
 const LogoContainer = styled.div`
