@@ -22,7 +22,7 @@ export default function SignUp() {
 
         if(password !== confirmPass) {
             setPassword('');
-            confirmPass('');
+            setConfirmPass('');
             alert('Senhas não confere, digite novamente!');
             return;
         }
@@ -54,7 +54,7 @@ export default function SignUp() {
             <form onSubmit={sendForm}>
                 <FormContent>
                     <h2>Insira o seu Nome</h2>
-                    <input type="text" name="email" placeholder="Nome"
+                    <input type="text" name="text" placeholder="Nome"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -70,7 +70,7 @@ export default function SignUp() {
                     <h2>Insira a sua Senha</h2>
                     <input type="password" name="password" placeholder="Senha" 
                     value={password}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                     />
 
