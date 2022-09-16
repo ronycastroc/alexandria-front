@@ -85,7 +85,7 @@ export default function SignUp() {
                 </FormContent>
             </form>
 
-            <p>Já possui uma conta? faça o 
+            <p>Já possui uma conta? Faça o 
                 <Link to={'/signin'}>
                     <span> Login </span>
                 </Link>

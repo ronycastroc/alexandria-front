@@ -6,6 +6,7 @@ import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import BookPage from "./Pages/BookPage";
 import UserContext from "../context/UserContext.js";
+import Cart from "./Pages/Cart";
 import { useState } from "react";
 
 export default function App() {
@@ -22,7 +23,7 @@ export default function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/sobrenos" element={<Teste />} />
             <Route path="/product/:bookId" element={<BookPage />} />
-            <Route path="/carrinho" element={<Teste />} />
+            <Route path="/carrinho" element={<Cart />} />
             <Route path="/categorias" element={<Teste />} />
             <Route path="/contato" element={<Teste />} />
           </Routes>

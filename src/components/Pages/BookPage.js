@@ -83,7 +83,7 @@ const Container = styled.div`
   background-image: linear-gradient( to top, black, #902923, #a22c29 );
   margin-top: 150px;
   margin-bottom: 50px;
-  box-shadow: 0px 2px 47px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 47px 5px rgba(0, 0, 0, 0.5);
 `;
 
 const BookCover = styled.div`

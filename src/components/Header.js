@@ -19,9 +19,7 @@ export default function Header() {
     if (localStorageCartItens !== null) {
       setCartItens(localStorageCartItens);
     }
-  }, [setCartItens, cartItens]);
-
-
+  }, [setCartItens]);
 
   return (
     <Wrapper>
@@ -126,7 +124,7 @@ const Categories = styled.div`
   transform: translate(-50%, 0%);
   border-bottom-left-radius: 1000px;
   border-bottom-right-radius: 1000px;
-  background-image: linear-gradient( to bottom, #0a100d -10%, #FFFFFF );
+  background-image: linear-gradient( to bottom, #0a100d, #D6D5C9 );
   box-shadow: 0px 3px 10px #0a100d; 
   
   div {

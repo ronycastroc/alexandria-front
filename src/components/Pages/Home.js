@@ -53,8 +53,9 @@ export default function Home() {
             </IconContext.Provider>
           </CarouselButton>
           <BooksContainer ref={carousel}>
-            {products.map((product) => (
+            {products.map((product, index) => (
               <BookBox
+                key={index}
                 author={product.author}
                 title={product.title}
                 cover={product.cover}
