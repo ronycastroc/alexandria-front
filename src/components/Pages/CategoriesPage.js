@@ -5,6 +5,7 @@ import { getProductWithCategory } from "../../service/alexandriaService.js";
 import Header from "../Header.js";
 import Footer from "../Footer.js";
 import BookBox from "../BookBox.js";
+import MobileHeader from "../MobileHeader.js";
 
 export default function CategoriesPage() {
   const params = useParams();
@@ -25,6 +26,7 @@ export default function CategoriesPage() {
   return (
     <Wrapper>
       <Header />
+      <MobileHeader/>
       <Container>
         <h1>{params.categoria}</h1>
         <BooksContainer>

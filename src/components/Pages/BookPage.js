@@ -6,6 +6,7 @@ import Header from "../Header.js";
 import Footer from "../Footer.js";
 import UserContext from "../../context/UserContext.js";
 import SmallCarousel from "../SmallCarousel.js";
+import MobileHeader from "../MobileHeader.js";
 
 export default function BookPage() {
   const params = useParams();
@@ -56,6 +57,7 @@ export default function BookPage() {
   return (
     <Wrapper>
       <Header />
+      <MobileHeader/>
       <Container>
           <BookCover>
             <img src={bookData.cover} alt="BookCover" />

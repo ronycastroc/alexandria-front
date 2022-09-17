@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import Header from "../Header";
 import Footer from "../Footer";
+import MobileHeader from "../MobileHeader";
 
 export default function AboutUs() {
   return (
     <>
       <Wrapper>
         <Header />
+        <MobileHeader/>
         <Container>
           <img
             src="https://st2.depositphotos.com/3591429/10464/i/600/depositphotos_104648666-stock-photo-group-of-people-brainstorming-on.jpg"
