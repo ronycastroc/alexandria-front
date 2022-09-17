@@ -1,12 +1,16 @@
 import styled from "styled-components";
-import { getProductWithCategory } from "../service/alexandriaService.js";
+import {
+  getProductWithCategory,
+  getProductWithID,
+} from "../service/alexandriaService.js";
 import { IoChevronForwardSharp, IoChevronBackSharp } from "react-icons/io5";
 import { IconContext } from "react-icons";
 import { useEffect, useState, useRef, useCallback } from "react";
 
-export default function SmallCarousel({ category }) {
+export default function SmallCarousel({ id }) {
   const carousel = useRef(null);
   const [products, setProducts] = useState([]);
+  const [book, setBook] = useState({});
 
   const handleLeftClick = useCallback((e) => {
     e.preventDefault();
@@ -19,16 +23,30 @@ export default function SmallCarousel({ category }) {
   }, []);
 
   useEffect(() => {
-    getProductWithCategory("Fantasia")
+    window.scrollTo(0, 0);
+    getProductWithID(id)
       .then((res) => {
-        setProducts(res.data);
-        console.log(res.data);
+        setBook(res.data);
+      })
+      .catch((err) => {
+        console.error(err.message);
+        alert("Erro ao buscar o livro na API com este ID");
+      });
+  }, [id]);
+
+  useEffect(() => {
+    getProductWithCategory(book.category)
+      .then((res) => {
+        const allBooks = res.data;
+        const removeDisplayedBook = allBooks.filter((book) => book._id !== id);
+        console.log(removeDisplayedBook);
+        setProducts(removeDisplayedBook);
       })
       .catch((err) => {
         console.error(err.message);
         alert("Erro ao buscar os produtos da API");
       });
-  }, []);
+  }, [book.category, id]);
 
   return (
     <Carousel>
@@ -77,7 +95,6 @@ const Carousel = styled.div`
   width: 100%;
   margin-bottom: 80px;
   margin-top: 20px;
-  
 `;
 
 const BooksContainer = styled.div`
@@ -95,9 +112,9 @@ const BooksContainer = styled.div`
     cursor: pointer;
     padding: 10px;
     background-color: #ffffff;
-    img{
-        width: 100%;
-        height: 280px;
+    img {
+      width: 100%;
+      height: 280px;
     }
     &:hover {
       top: 0;

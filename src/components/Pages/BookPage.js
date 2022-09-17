@@ -9,6 +9,7 @@ import SmallCarousel from "../SmallCarousel.js";
 
 export default function BookPage() {
   const params = useParams();
+  console.log(params)
   const [bookData, setbookData] = useState({});
   const { cartItens, setCartItens } = useContext(UserContext);
 
@@ -55,7 +56,7 @@ export default function BookPage() {
         </Container>      
 
       <h1>Veja mais livros desta categoria:</h1>
-      <SmallCarousel category={bookData.category} />
+      <SmallCarousel id={params.bookId} />
       <Footer />
     </Wrapper>
   );
@@ -78,9 +79,9 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  width: 1000px;
-  height: 500px;
-  background-image: linear-gradient( to top, black, #902923, #a22c29 );
+  //background-image: linear-gradient( to top, black, #902923, #a22c29 );
+  background-image: linear-gradient( to top, #b6322e, #a22c29, #79211f );
+  padding: 30px 0;
   margin-top: 150px;
   margin-bottom: 50px;
   box-shadow: 0px 2px 47px 5px rgba(0, 0, 0, 0.5);
