@@ -75,19 +75,19 @@ export default function Header() {
       
       <Categories categoriesBar={categoriesBar}>
         <div>        
-        <Link to="/categorias/terror">          
+        <Link to="/categorias/Terror">          
             <span>Terror</span>          
         </Link>
-        <Link to="/categorias/fantasia">          
+        <Link to="/categorias/Fantasia">          
             <span>Fantasia</span>          
         </Link>
-        <Link to="/categorias/ficcaocientifica">          
+        <Link to="/categorias/FiccaoCientifica">          
             <span>Ficção Cientifica</span>          
         </Link>
-        <Link to="/categorias/romance">          
+        <Link to="/categorias/Romance">          
             <span>Romance</span>          
         </Link>
-        <Link to="/categorias/autoajuda">          
+        <Link to="/categorias/AutoAjuda">          
             <span>Auto-ajuda</span>          
         </Link>
         </div>
@@ -114,7 +114,7 @@ const Wrapper = styled.div`
 
 const Categories = styled.div`
   width: 70%;
-  height: ${props => props.categoriesBar === false ? ('0px') : ('50px')};
+  height: ${props => props.categoriesBar === false ? ('0px') : ('40px')};
   opacity: ${props => props.categoriesBar === false ? (0) : (1)};
   transition: all 0.5s ease;
   background-color: #0a100d;

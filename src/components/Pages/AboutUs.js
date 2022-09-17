@@ -12,8 +12,8 @@ export default function AboutUs() {
             src="https://st2.depositphotos.com/3591429/10464/i/600/depositphotos_104648666-stock-photo-group-of-people-brainstorming-on.jpg"
             alt="aboutUs"
           />
-          <h1>Nossa História:</h1>
           <div>
+            <h1>Nossa História:</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -27,9 +27,9 @@ export default function AboutUs() {
               Lorem Ipsum.
             </p>
           </div>
-
-          <h1>Nossos Objetivos:</h1>
           <div>
+            <h1>Nossos Objetivos:</h1>
+
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -57,7 +57,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 250px;
+  margin-top: 200px;
   margin-bottom: 200px;
 `;
 
@@ -69,15 +69,21 @@ const Container = styled.div`
   h1 {
     font-size: 30px;
     font-weight: 700;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     text-align: center;
+    color: #0a100d;
   }
   div {
     width: 700px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
   }
   p {
     line-height: 25px;
     text-align: center;
+    color: #0a100d;
   }
 `;

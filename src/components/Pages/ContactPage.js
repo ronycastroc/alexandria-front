@@ -26,11 +26,7 @@ export default function ContactsPage() {
       <Wrapper>
         <Header />
         <Container>
-          <img
-            src="https://img.freepik.com/fotos-gratis/livro-aberto-e-fundo-da-biblia_112554-164.jpg?w=360"
-            alt="ContacImg"
-          />
-          <h1>Contate-nos:</h1>
+          <h1>Contate-nos</h1>
           <div>
             <FormContainer>
               <form onSubmit={handleFormSubmission}>
@@ -132,18 +128,20 @@ const Wrapper = styled.div`
     font-weight: 700;
     margin-bottom: 30px;
     margin-top: 40px;
-    text-align: center;
   }
 `;
 
 const Container = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-top: 150px;
   margin-bottom: 100px;
+  background-color: #B9BAA3;
+  box-shadow: 0px 2px 10px 5px rgb(0 0 0 / 20%);
+  border-radius: 5px;
+  padding: 40px;
   > div {
     display: flex;
     flex-direction: row;
@@ -164,10 +162,6 @@ const FormContainer = styled.div`
       font-size: 15px;
       border: 1px solid #b9baa3;
       color: #0a100d;
-      //cursor: text;
-      //text-align: start;
-      //white-space: pre-wrap;
-      //overflow-wrap: break-word;
     }
     div {
       margin-top: 10px;
@@ -192,6 +186,7 @@ const FormContainer = styled.div`
       border: none;
       cursor: pointer;
       color: #0a100d;
+      box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease-out 0s;
       &:hover {
         color: #ffffff;
