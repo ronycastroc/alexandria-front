@@ -194,9 +194,9 @@ const FormContainer = styled.div`
 const SmallInputHolder = styled.div`
   margin-top: 10px;
   width: 100%;
-display: flex;
-flex-direction: row;
-justify-content: space-between !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
   @media (max-width: 650px) {
     display: flex;
     flex-direction: column;

@@ -8,12 +8,8 @@ export default function AboutUs() {
     <>
       <Wrapper>
         <Header />
-        <MobileHeader/>
+        <MobileHeader />
         <Container>
-          <img
-            src="https://st2.depositphotos.com/3591429/10464/i/600/depositphotos_104648666-stock-photo-group-of-people-brainstorming-on.jpg"
-            alt="aboutUs"
-          />
           <div>
             <h1>Nossa História:</h1>
             <p>
@@ -59,15 +55,16 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
-  margin-bottom: 200px;
 `;
 
 const Container = styled.div`
-  img {
-    width: 700px;
-    height: 400px;
+  margin-top: 200px;
+  margin-bottom: 250px;
+  @media (max-width: 650px) {
+    margin-top: 250px !important;
+    margin-bottom: 0px;
   }
+
   h1 {
     font-size: 30px;
     font-weight: 700;
@@ -88,4 +85,29 @@ const Container = styled.div`
     text-align: center;
     color: #0a100d;
   }
+
+  @media (max-width: 650px) {
+    h1 {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      text-align: center;
+      color: #0a100d;
+    }
+    div {
+      width: 350px;
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+      margin: 30px 0;
+    }
+    p {
+      line-height: 25px;
+      text-align: center;
+      color: #0a100d;
+    }
+  }
 `;
+
+//git push origin responsiveHeader
