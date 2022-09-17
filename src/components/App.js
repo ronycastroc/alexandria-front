@@ -4,8 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import BookPage from "./Pages/BookPage";
-import UserContext from "../context/UserContext.js";
 import Cart from "./Pages/Cart";
+import CheckOut from "./Pages/CheckOut";
+import UserContext from "../context/UserContext.js";
 import { useState } from "react";
 import AboutUs from "./Pages/AboutUs";
 import ContactsPage from "./Pages/ContactPage";
@@ -25,9 +26,10 @@ export default function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/sobrenos" element={<AboutUs />} />
             <Route path="/product/:bookId" element={<BookPage />} />
-            <Route path="/carrinho" element={<Cart />} />
+            <Route path="/carrinho" element={<Cart />} />            
             <Route path="/categorias/:categoria" element={<CategoriesPage />} />
             <Route path="/contato" element={<ContactsPage />} />
+            <Route path="/checkout" element={<CheckOut />}/>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>

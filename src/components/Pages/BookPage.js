@@ -15,11 +15,27 @@ export default function BookPage() {
 
   function addBookToCart() {
     const localCartItens = JSON.parse(localStorage.getItem("CART"));
+    
     if (localCartItens !== null) {
-      const newCart = [...cartItens, bookData];
-      setCartItens(newCart);
-      localStorage.setItem("CART", JSON.stringify(newCart));
+      if(localCartItens.find(value => value._id === params.bookId)) {
+        localCartItens.forEach(value => {
+          if(value._id === params.bookId) {
+            value.quantity += 1;
+          }
+        })
+        const newCart = [...localCartItens];
+        setCartItens(newCart);
+        localStorage.setItem("CART", JSON.stringify(newCart));
+
+      } else {
+        bookData.quantity = 1
+        const newCart = [...cartItens, bookData];
+        setCartItens(newCart);
+        localStorage.setItem("CART", JSON.stringify(newCart));
+      }      
+
     } else {
+      bookData.quantity = 1
       setCartItens([...cartItens, bookData]);
       localStorage.setItem("CART", JSON.stringify([bookData]));
     }

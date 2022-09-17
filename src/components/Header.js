@@ -116,7 +116,7 @@ const Categories = styled.div`
   width: 70%;
   height: ${props => props.categoriesBar === false ? ('0px') : ('40px')};
   opacity: ${props => props.categoriesBar === false ? (0) : (1)};
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   background-color: #0a100d;
   position: absolute;
   top: 80px;
