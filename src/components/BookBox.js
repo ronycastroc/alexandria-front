@@ -17,11 +17,11 @@ export default function BookBox({ author, title, cover, id, price }) {
 }
 
 const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
+  min-width: 250px;
+  height: 400px;
+  flex: 0 0;
   background-color: #ffffff;
   padding: 10px;
-  margin-right: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

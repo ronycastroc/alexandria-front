@@ -6,6 +6,7 @@ import Header from "../Header.js";
 import Footer from "../Footer.js";
 import UserContext from "../../context/UserContext.js";
 import SmallCarousel from "../SmallCarousel.js";
+import MobileHeader from "../MobileHeader.js";
 
 export default function BookPage() {
   const params = useParams();
@@ -56,6 +57,7 @@ export default function BookPage() {
   return (
     <Wrapper>
       <Header />
+      <MobileHeader/>
       <Container>
           <BookCover>
             <img src={bookData.cover} alt="BookCover" />
@@ -83,7 +85,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  h1 {
+  >h1 {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 30px;
@@ -95,7 +97,6 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  //background-image: linear-gradient( to top, black, #902923, #a22c29 );
   background-image: linear-gradient( to top, #b6322e, #a22c29, #79211f );
   padding: 30px 0;
   margin-top: 150px;
