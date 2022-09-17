@@ -108,6 +108,9 @@ const Wrapper = styled.div`
   justify-content: space-around;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 1;
+  @media (max-width: 651px) {
+    display: none;
+  }
 `;
 
 const Categories = styled.div`

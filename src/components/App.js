@@ -31,7 +31,6 @@ export default function App() {
             <Route path="/categorias/:categoria" element={<CategoriesPage />} />
             <Route path="/contato" element={<ContactsPage />} />
             <Route path="/checkout" element={<CheckOut />}/>
-            <Route path="/a" element={<MobileHeader/>}/>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
