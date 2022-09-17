@@ -24,11 +24,14 @@ export default function SignIn() {
             localStorage.setItem('name', JSON.stringify(res.data.name));
             localStorage.setItem('token', JSON.stringify(res.data.token));
             navigate('/');
+
+            setInterval(() => {
+                localStorage.removeItem('token');
+            }, 3600000)
         })
         .catch(() => {
             resetForm();
-            alert('Seu email ou senha estão incorretos, digite novamente.');
-            
+            alert('Seu email ou senha estão incorretos, digite novamente.');            
         })
     }
 

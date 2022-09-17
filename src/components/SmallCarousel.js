@@ -22,7 +22,6 @@ export default function SmallCarousel({ category }) {
     getProductWithCategory("Fantasia")
       .then((res) => {
         setProducts(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.error(err.message);
