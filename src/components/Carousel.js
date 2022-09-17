@@ -7,15 +7,34 @@ import styled from "styled-components";
 export default function Caroussel({ products }) {
   const carousel = useRef(null);
 
-  const handleLeftClick = useCallback((e) => {
+  const moveCarousel = useCallback((e, multiplicador) => {
     e.preventDefault();
-    carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    const tamanhoTela = carousel.current.offsetWidth;
+    const tamanhoLivro = carousel.current.children[0].offsetWidth + 20;
+    const scrollAtual = carousel.current.scrollLeft;
+
+    let novoScroll =
+      (Math.floor(scrollAtual / tamanhoLivro) + multiplicador) * tamanhoLivro;
+
+    if (tamanhoTela < tamanhoLivro) {
+      novoScroll += (tamanhoLivro - tamanhoTela) / 2;
+    }
+    carousel.current.scrollLeft = novoScroll;
   }, []);
 
-  const handleRightClick = useCallback((e) => {
-    e.preventDefault();
-    carousel.current.scrollLeft += carousel.current.offsetWidth;
-  }, []);
+  const handleLeftClick = useCallback(
+    (e) => {
+      moveCarousel(e, -1);
+    },
+    [moveCarousel]
+  );
+
+  const handleRightClick = useCallback(
+    (e) => {
+      moveCarousel(e, 1);
+    },
+    [moveCarousel]
+  );
 
   return (
     <Carousel>
@@ -74,12 +93,13 @@ const BooksContainer = styled.div`
   height: 500px;
   overflow-x: auto;
   padding: 20px;
+  display: flex;
   overflow-y: hidden;
   white-space: nowrap;
+  column-gap: 20px;
   scroll-behavior: smooth;
-  > div {
+  /* > div {
     display: inline-block;
-    margin-right: 20px;
     width: 250px;
     height: 400px;
     cursor: pointer;
@@ -90,7 +110,7 @@ const BooksContainer = styled.div`
       top: 0;
       box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
     }
-  }
+  } */
   ::-webkit-scrollbar {
     display: none;
   }

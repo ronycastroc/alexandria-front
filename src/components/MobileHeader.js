@@ -36,8 +36,8 @@ export default function MobileHeader() {
 
   return (
     <>
-      <Wrapper visible={sidebar}>
-        <div>
+      <Wrapper className="Header" visible={sidebar}>
+        <div onClick={() => navigate("/")}>
           <IconContext.Provider
             value={{
               color: "#FFFFFF",
@@ -139,13 +139,11 @@ const Wrapper = styled.div`
   @media (min-width: 650px) {
     display: none;
   }
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: #0a100d;
   height: 80px;
+  width: 100%;
   display: flex;
+  flex: 0 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
