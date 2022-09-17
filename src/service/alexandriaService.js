@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000";
+//const BASE_URL = "http://localhost:5000";
+
+const BASE_URL = "https://alexandria-back.herokuapp.com";
 
 function createHeaders() {
   const auth = JSON.parse(localStorage.getItem("token"));

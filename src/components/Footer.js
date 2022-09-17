@@ -80,29 +80,29 @@ export default function Footer() {
       </div>
       <CategoriesContainer>
         <div>
-          <h1>Categorias:</h1>
+          <h1>Categorias</h1>
         </div>
-        <Link to="/categorias/terror">
+        <Link to="/categorias/Terror">
           <div>
             <p>Terror</p>
           </div>
         </Link>
-        <Link to="/categorias/fantasia">
+        <Link to="/categorias/Fantasia">
           <div>
             <p>Fantasia</p>
           </div>
         </Link>
-        <Link to="/categorias/ficcaocientifica">
+        <Link to="/categorias/FiccaoCientifica">
           <div>
             <p>Ficção Cientifica</p>
           </div>
         </Link>
-        <Link to="/categorias/romance">
+        <Link to="/categorias/Romance">
           <div>
             <p>Romance</p>
           </div>
         </Link>
-        <Link to="/categorias/autoajuda">
+        <Link to="/categorias/AutoAjuda">
           <div>
             <p>Auto-ajuda</p>
           </div>
@@ -171,12 +171,14 @@ const LogoContainer = styled.div`
       font-family: "Qwitcher Grypen", cursive !important;
       font-size: 50px;
       color: #0a100d;
-      margin-bottom: 0px;
+      font-weight: 700;
+      margin-bottom: 0px !important;
+      margin-top: 0px !important;
     }
     p {
       font-size: 10px;
       color: #0a100d;
-      margin-bottom: 10px;
+      padding-bottom: 10px;
     }
   }
 `;
@@ -217,6 +219,8 @@ const CategoriesContainer = styled.div`
   h1 {
     margin-bottom: 10px !important;
     text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
   }
   p {
     color: #0a100d;
@@ -239,6 +243,8 @@ const SiteMap = styled.div`
   h1 {
     margin-bottom: 10px !important;
     text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
   }
   p {
     color: #0a100d;
