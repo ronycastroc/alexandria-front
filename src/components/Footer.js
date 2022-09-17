@@ -144,7 +144,7 @@ export default function Footer() {
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 300px;
+  height: 350px;
   background-color: #b9baa3;
   display: flex;
   flex-direction: row;

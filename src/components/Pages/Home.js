@@ -46,7 +46,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   width: 100%;
-  margin-top: 150px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -57,6 +57,6 @@ const Container = styled.div`
     margin-bottom: 30px;
   }
   @media (max-width: 650px) {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 `;

@@ -85,7 +85,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  h1 {
+  >h1 {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 30px;
@@ -97,7 +97,6 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  //background-image: linear-gradient( to top, black, #902923, #a22c29 );
   background-image: linear-gradient( to top, #b6322e, #a22c29, #79211f );
   padding: 30px 0;
   margin-top: 150px;

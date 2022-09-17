@@ -44,8 +44,8 @@ export default function AboutUs() {
             </div>
           </Container>
         </Content>
+        <Footer />
       </Wrapper>
-      <Footer />
     </>
   );
 }
@@ -74,7 +74,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  h1 {
+  > h1 {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -88,6 +88,14 @@ const Container = styled.div`
     padding: 20px;
     box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
     margin: 30px 0;
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      text-align: center;
+      color: #0a100d;
+    }
   }
   p {
     line-height: 25px;
