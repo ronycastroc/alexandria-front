@@ -82,27 +82,27 @@ export default function Footer() {
         <div>
           <h1>Categorias</h1>
         </div>
-        <Link to="/categorias/terror">
+        <Link to="/categorias/Terror">
           <div>
             <p>Terror</p>
           </div>
         </Link>
-        <Link to="/categorias/fantasia">
+        <Link to="/categorias/Fantasia">
           <div>
             <p>Fantasia</p>
           </div>
         </Link>
-        <Link to="/categorias/ficcaocientifica">
+        <Link to="/categorias/FiccaoCientifica">
           <div>
             <p>Ficção Cientifica</p>
           </div>
         </Link>
-        <Link to="/categorias/romance">
+        <Link to="/categorias/Romance">
           <div>
             <p>Romance</p>
           </div>
         </Link>
-        <Link to="/categorias/autoajuda">
+        <Link to="/categorias/AutoAjuda">
           <div>
             <p>Auto-ajuda</p>
           </div>
