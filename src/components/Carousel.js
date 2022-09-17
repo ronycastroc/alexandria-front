@@ -98,19 +98,6 @@ const BooksContainer = styled.div`
   white-space: nowrap;
   column-gap: 20px;
   scroll-behavior: smooth;
-  /* > div {
-    display: inline-block;
-    width: 250px;
-    height: 400px;
-    cursor: pointer;
-    h1 {
-      margin-bottom: 0px;
-    }
-    &:hover {
-      top: 0;
-      box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
-    }
-  } */
   ::-webkit-scrollbar {
     display: none;
   }
