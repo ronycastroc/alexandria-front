@@ -11,6 +11,7 @@ import { useState } from "react";
 import AboutUs from "./Pages/AboutUs";
 import ContactsPage from "./Pages/ContactPage";
 import CategoriesPage from "./Pages/CategoriesPage";
+import MobileHeader from "./MobileHeader";
 
 export default function App() {
   const [cartItens, setCartItens] = useState([]);
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/categorias/:categoria" element={<CategoriesPage />} />
             <Route path="/contato" element={<ContactsPage />} />
             <Route path="/checkout" element={<CheckOut />}/>
+            <Route path="/a" element={<MobileHeader/>}/>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
