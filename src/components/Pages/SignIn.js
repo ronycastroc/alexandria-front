@@ -23,11 +23,7 @@ export default function SignIn() {
             resetForm();
             localStorage.setItem('name', JSON.stringify(res.data.name));
             localStorage.setItem('token', JSON.stringify(res.data.token));
-            navigate('/');
-
-            setInterval(() => {
-                localStorage.removeItem('token');
-            }, 3600000)
+            navigate('/');            
         })
         .catch(() => {
             resetForm();

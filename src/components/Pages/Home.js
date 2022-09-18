@@ -6,12 +6,10 @@ import { useRef, useCallback, useEffect, useState } from "react";
 import BookBox from "../BookBox";
 import Footer from "../Footer";
 import { getProductsFromAPI } from "../../service/alexandriaService";
-import { json } from "react-router-dom";
 
 export default function Home() {
   const carousel = useRef(null);
   const [products, setProducts] = useState([]);
-  console.log(JSON.parse(localStorage.getItem('token')))
 
   useEffect(() => {
     getProductsFromAPI()

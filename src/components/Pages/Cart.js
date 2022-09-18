@@ -19,13 +19,14 @@ export default function Cart() {
     
     function checkOutPage() {
         if (cartItens.length === 0) {
-            return alert('Seu carrinho está vazio!');
+            return alert("Seu carrinho está vazio!");
         }
 
         if(isUser !== null) {
-            navigate("/checkout");
+            navigate(`/checkout/`, {state: subTotal});
 
         } else {
+            alert("Primeiro faça o login");
             navigate("/signin");
         }
     }
@@ -34,7 +35,7 @@ export default function Cart() {
         <>
             <Header />
 
-            <ProductsCart>
+            <Wrapper>
                 <Infos>
                     <span>Produtos</span>
                     <span>Preço</span>
@@ -52,7 +53,7 @@ export default function Cart() {
                 </div>
                 
                 <CheckOut>
-                    <p>Subtotal: R${subTotal}</p>
+                    <p>Subtotal: R${subTotal.toFixed(2)}</p>
                     <div onClick={checkOutPage}>
                         Checkout
                     </div>
@@ -63,14 +64,14 @@ export default function Cart() {
                     Continuar comprando
                 </Link>
 
-            </ProductsCart>
+            </Wrapper>
 
             <Footer />
         </>
     )
 }
 
-const ProductsCart = styled.div`
+const Wrapper = styled.div`
     max-width: 700px;
     min-height: 80vh;
     background-color: #D6D5C9;
