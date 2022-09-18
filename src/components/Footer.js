@@ -144,13 +144,16 @@ export default function Footer() {
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 300px;
+  height: 350px;
   background-color: #b9baa3;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   box-shadow: 0px -2px 4px rgb(0 0 0 / 15%);
+  @media (max-width: 651px) {
+    display: none;
+  }
 `;
 
 const LogoContainer = styled.div`
