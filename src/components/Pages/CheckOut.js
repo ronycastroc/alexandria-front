@@ -66,7 +66,7 @@ export default function CheckOut() {
         postCheckOut(body)
         .then(() => {
             resetForm();
-            localStorage.removeItem("CART")
+            localStorage.removeItem("CART");
             navigate("/sucess");
         })
         .catch(() => {
