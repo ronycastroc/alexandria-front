@@ -80,13 +80,13 @@ export default function Header() {
           <Link to="/categorias/Fantasia">
             <span>Fantasia</span>
           </Link>
-          <Link to="/categorias/Ficção-Cientifica">
+          <Link to="/categorias/Ficção Cientifica">
             <span>Ficção Cientifica</span>
           </Link>
           <Link to="/categorias/Romance">
             <span>Romance</span>
           </Link>
-          <Link to="/categorias/Auto-ajuda">
+          <Link to="/categorias/Auto ajuda">
             <span>Auto-ajuda</span>
           </Link>
         </div>
