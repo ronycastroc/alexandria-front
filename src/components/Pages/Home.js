@@ -13,6 +13,7 @@ export default function Home() {
     getProductsFromAPI()
       .then((res) => {
         setProducts(res.data);
+        console.log(res.data)
       })
       .catch((err) => {
         console.error(err.message);

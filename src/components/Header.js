@@ -86,7 +86,7 @@ export default function Header() {
           <Link to="/categorias/Romance">
             <span>Romance</span>
           </Link>
-          <Link to="/categorias/Auto-Ajuda">
+          <Link to="/categorias/Auto-ajuda">
             <span>Auto-ajuda</span>
           </Link>
         </div>
