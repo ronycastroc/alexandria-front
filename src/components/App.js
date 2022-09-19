@@ -12,7 +12,6 @@ import AboutUs from "./Pages/AboutUs";
 import ContactsPage from "./Pages/ContactPage";
 import CategoriesPage from "./Pages/CategoriesPage";
 import Sucess from "./Pages/Sucess";
-import MobileHeader from "./MobileHeader";
 
 export default function App() {
   const [cartItens, setCartItens] = useState([]);

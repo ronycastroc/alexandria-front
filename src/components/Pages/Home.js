@@ -41,7 +41,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
- 
 `;
 
 const Container = styled.div`
@@ -51,7 +50,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  >h1 {
+  > h1 {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 30px;
