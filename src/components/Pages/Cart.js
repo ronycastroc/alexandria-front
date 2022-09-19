@@ -98,7 +98,7 @@ const Wrapper = styled.div`
     a {
         position: absolute;
         color: #A22C29;
-        left: 30px;
+        left: 20px;
         bottom: 30px;
         margin-left: 20;
     }

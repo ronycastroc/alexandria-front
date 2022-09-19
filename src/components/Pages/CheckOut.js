@@ -119,14 +119,14 @@ export default function CheckOut() {
                         <input type="number" name="cellphone"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        
+                        required
                         />
 
                         <h2>CEP</h2>
                         <input type="number" name="zipcode"
                         value={zipCode}
                         onChange={(e) => setZipCode(e.target.value)}
-                        
+                        required
                         />                        
                         
                         <section>
@@ -447,8 +447,8 @@ const PaymentData = styled.div`
         width: 100px;
         height: 50px;
         border-radius: 50px;
-        bottom: 40px;
-        right: 40px;
+        bottom: 20px;
+        right: 20px;
         color: #D6D5C9;
         font-size: 1rem;
         font-weight: 500;
@@ -465,8 +465,8 @@ const PaymentData = styled.div`
     a {
         position: absolute;
         color: #A22C29;
-        left: 30px;
-        bottom: 40px;
+        left: 20px;
+        bottom: 30px;
         margin-left: 20;
     }
 
