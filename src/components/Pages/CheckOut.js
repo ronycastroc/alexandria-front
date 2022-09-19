@@ -386,7 +386,7 @@ const Wrapper = styled.div`
 
 const ShippingData = styled.div`
   width: 100%;
-  min-height: 70vh;
+  min-height: 390px;
   border-right: 1px solid #b9baa3;
   display: flex;
   flex-direction: column;
@@ -441,7 +441,7 @@ const ShippingData = styled.div`
 
 const PaymentData = styled.div`
   width: 100%;
-  min-height: 80vh;
+  min-height: 460px;
   display: flex;
   flex-direction: column;
 
