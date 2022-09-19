@@ -121,7 +121,7 @@ const CheckOut = styled.div`
     bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     font-weight: bold;
 
