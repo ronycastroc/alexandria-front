@@ -92,7 +92,7 @@ export default function Footer() {
             <p>Fantasia</p>
           </div>
         </Link>
-        <Link to="/categorias/FiccaoCientifica">
+        <Link to="/categorias/Ficção Cientifica">
           <div>
             <p>Ficção Cientifica</p>
           </div>
@@ -102,9 +102,9 @@ export default function Footer() {
             <p>Romance</p>
           </div>
         </Link>
-        <Link to="/categorias/AutoAjuda">
+        <Link to="/categorias/Auto ajuda">
           <div>
-            <p>Auto-ajuda</p>
+            <p>Auto ajuda</p>
           </div>
         </Link>
       </CategoriesContainer>

@@ -80,13 +80,13 @@ export default function Header() {
           <Link to="/categorias/Fantasia">
             <span>Fantasia</span>
           </Link>
-          <Link to="/categorias/FiccaoCientifica">
+          <Link to="/categorias/Ficção Cientifica">
             <span>Ficção Cientifica</span>
           </Link>
           <Link to="/categorias/Romance">
             <span>Romance</span>
           </Link>
-          <Link to="/categorias/AutoAjuda">
+          <Link to="/categorias/Auto ajuda">
             <span>Auto-ajuda</span>
           </Link>
         </div>
@@ -98,7 +98,7 @@ export default function Header() {
 const Wrapper = styled.div`
   width: 100%;
   background-color: #0a100d;
-  min-height: 80px;
+  min-height: 80px !important;
   display: flex;
   flex-direction: row;
   align-items: center;
