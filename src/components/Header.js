@@ -98,7 +98,7 @@ export default function Header() {
 const Wrapper = styled.div`
   width: 100%;
   background-color: #0a100d;
-  height: 80px;
+  height: 80px !important;
   display: flex;
   flex-direction: row;
   align-items: center;
