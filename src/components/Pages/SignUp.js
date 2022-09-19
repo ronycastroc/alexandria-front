@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { postSignUp } from "../../service/alexandriaService";
 import { AuthBox, FormContent } from "./SignIn";
+import { IoArrowUndo } from "react-icons/io5";
 
 export default function SignUp() {
     const [name, setName] = useState('');
@@ -85,10 +86,13 @@ export default function SignUp() {
                 </FormContent>
             </form>
 
-            <p>Já possui uma conta? Faça o 
-                <Link to={'/signin'}>
-                    <span> Login </span>
-                </Link>
+            <Link to="/">
+                <IoArrowUndo />
+                Voltar para o início
+            </Link>
+
+            <p>Já possui uma conta? Faça o               
+                    <span onClick={() => navigate('/signin')}> Login </span>                
                 aqui.</p>          
 
         </AuthBox>

@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { postSignIn } from "../../service/alexandriaService";
+import { IoArrowUndo } from "react-icons/io5";
 import styled from "styled-components";
 
 
@@ -61,10 +62,14 @@ export default function SignIn() {
                 </FormContent>
             </form>
 
-            <p>Não tem uma conta? 
-                <Link to={'/signup'}>
-                    <span> Cadastre-se </span>
-                </Link>
+            <Link to="/">
+                <IoArrowUndo />
+                Voltar para o início
+            </Link>
+         
+
+            <p>Não tem uma conta?            
+                    <span onClick={() => navigate('/signup')}> Cadastre-se </span>                
                 aqui.</p>          
 
         </AuthBox>
@@ -107,10 +112,16 @@ const AuthBox = styled.div`
 
     span {
         color: #A22C29;
+        cursor: pointer;
     }
 
     a {
-        text-decoration: none;
+        text-decoration: none;        
+        position: absolute;
+        color: #A22C29;
+        left: 20px;
+        bottom: 30px;
+        margin-left: 20;    
     }
 
 `;
@@ -144,8 +155,8 @@ const FormContent = styled.div`
         width: 100px;
         height: 50px;
         border-radius: 50px;
-        bottom: 40px;
-        right: 40px;
+        bottom: 20px;
+        right: 20px;
         color: #D6D5C9;
         font-size: 1rem;
         font-weight: 500;

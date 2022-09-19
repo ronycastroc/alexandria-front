@@ -116,23 +116,21 @@ export default function CheckOut() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-            />
+            /> 
 
             <h2>Telefone</h2>
-            <input
-              type="number"
-              name="cellphone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
+            <input type="number" name="cellphone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+                />
 
             <h2>CEP</h2>
-            <input
-              type="number"
-              name="zipcode"
-              value={zipCode}
-              onChange={(e) => setZipCode(e.target.value)}
-            />
+            <input type="number" name="zipcode"
+            value={zipCode}
+            onChange={(e) => setZipCode(e.target.value)}
+            required
+            />    
 
             <section>
               <section>
@@ -461,6 +459,32 @@ const PaymentData = styled.div`
     }
   }
 
+    input:nth-child(4), 
+    input:nth-child(6), 
+    input:nth-child(8), 
+    input:nth-child(10), 
+    input:nth-child(12) {
+        margin-left: 20px;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        position: absolute;
+        border: none;
+        width: 100px;
+        height: 50px;
+        border-radius: 50px;
+        bottom: 20px;
+        right: 20px;
+        color: #D6D5C9;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        background: linear-gradient(to left, #A22C29 50%, #902923 50%) right;
+        background-size: 200%;
+        transition: .5s ease-out;
+    }
   h2 {
     margin-left: 20px;
   }
@@ -475,6 +499,13 @@ const PaymentData = styled.div`
     margin-bottom: 10px;
   }
 
+    a {
+        position: absolute;
+        color: #A22C29;
+        left: 20px;
+        bottom: 30px;
+        margin-left: 20;
+    }
   button {
     position: absolute;
     border: none;
