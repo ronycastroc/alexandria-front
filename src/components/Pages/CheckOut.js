@@ -342,7 +342,7 @@ const Wrapper = styled.div`
   border-radius: 5px;
   box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  margin-top: 120px;
+  margin-top: 60px;
   margin-bottom: 60px;
   position: relative;
 
@@ -386,7 +386,7 @@ const Wrapper = styled.div`
 
 const ShippingData = styled.div`
   width: 100%;
-  min-height: 75vh;
+  min-height: 70vh;
   border-right: 1px solid #b9baa3;
   display: flex;
   flex-direction: column;
@@ -432,11 +432,16 @@ const ShippingData = styled.div`
       margin-left: 20px;
     }
   }
+
+  @media (max-width: 500px) {
+    border-right: none;
+    border-bottom: 1px solid #b9baa3;
+  }
 `;
 
 const PaymentData = styled.div`
   width: 100%;
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
 
@@ -467,24 +472,8 @@ const PaymentData = styled.div`
         margin-left: 20px;
         width: 80%;
         margin-bottom: 10px;
-    }
+    }    
     
-    button {
-        position: absolute;
-        border: none;
-        width: 100px;
-        height: 50px;
-        border-radius: 50px;
-        bottom: 20px;
-        right: 20px;
-        color: #D6D5C9;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-        background: linear-gradient(to left, #A22C29 50%, #902923 50%) right;
-        background-size: 200%;
-        transition: .5s ease-out;
-    }
   h2 {
     margin-left: 20px;
   }
@@ -499,21 +488,14 @@ const PaymentData = styled.div`
     margin-bottom: 10px;
   }
 
-    a {
-        position: absolute;
-        color: #A22C29;
-        left: 20px;
-        bottom: 30px;
-        margin-left: 20;
-    }
   button {
     position: absolute;
     border: none;
     width: 100px;
     height: 50px;
     border-radius: 50px;
-    bottom: 40px;
-    right: 40px;
+    bottom: 20px;
+    right: 20px;
     color: #d6d5c9;
     font-size: 1rem;
     font-weight: 500;
@@ -530,9 +512,8 @@ const PaymentData = styled.div`
   a {
     position: absolute;
     color: #a22c29;
-    left: 30px;
-    bottom: 40px;
-    margin-left: 20;
+    left: 20px;
+    bottom: 30px;
   }
 
   h3 {

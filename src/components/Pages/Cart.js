@@ -80,7 +80,7 @@ const Wrapper = styled.div`
     border-radius: 5px;
     box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
-    margin-top: 120px;
+    margin-top: 60px;
     margin-bottom: 60px;
     padding-bottom: 150px;
     position: relative;
@@ -102,7 +102,6 @@ const Wrapper = styled.div`
         color: #A22C29;
         left: 20px;
         bottom: 30px;
-        margin-left: 20;
     }
 
 `;
