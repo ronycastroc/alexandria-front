@@ -131,12 +131,6 @@ const Wrapper = styled.div`
     height: 300px;
     box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.2);
   }
-  h1 {
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    margin-top: 40px;
-  }
 `;
 
 const Container = styled.div`
@@ -150,10 +144,15 @@ const Container = styled.div`
   box-shadow: 0px 2px 10px 5px rgb(0 0 0 / 20%);
   border-radius: 5px;
   padding: 40px;
+  > h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
 
   @media (max-width: 650px) {
     margin-bottom: 0px;
-    margin-top: 100px;
+    margin-top: 70px;
     width: 300px;
   }
 `;

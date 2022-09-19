@@ -65,6 +65,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  @media (max-width: 650px) {
+    margin-top: 50px;
+  }
   h1 {
     font-size: 30px;
     font-weight: 700;
@@ -79,6 +82,9 @@ const BooksContainer = styled.div`
   width: 1000px;
   flex-wrap: wrap;
   column-gap: 15px;
+  @media (max-width: 650px) {
+    width: 300px;
+  }
   > div {
     margin-right: 20px;
     width: 250px;

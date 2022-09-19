@@ -6,8 +6,10 @@ import {
   IoBookSharp,
   IoCartOutline,
   IoMenuSharp,
+  IoPersonSharp,
   IoCloseSharp,
   IoChevronForwardSharp,
+  IoChevronDownSharp,
 } from "react-icons/io5";
 import { IconContext } from "react-icons";
 
@@ -31,7 +33,6 @@ export default function MobileHeader() {
 
   function handleCategoriesList() {
     setshowCategoriesList(!showCategoriesList);
-    console.log("oi");
   }
 
   return (
@@ -81,24 +82,36 @@ export default function MobileHeader() {
               <IoCloseSharp />
             </div>
           </IconContext.Provider>
-        </CloseButton>
-        <LoginAndCartContainer visible={sidebar}>
-          <div>
+          <div onClick={() => navigate("/signin")}>
             <IconContext.Provider
               value={{
                 color: "#FFFFFF",
                 className: "global-class-name",
-                size: "45px",
+                size: "30px",
               }}
             >
-              <CartContainer onClick={() => navigate("/carrinho")}>
-                <IoCartOutline />
-                <CartNumber>{cartItens.length}</CartNumber>
-              </CartContainer>
+              <div>
+                <IoPersonSharp />
+              </div>
             </IconContext.Provider>
           </div>
-          <button onClick={() => navigate("/signin")}>LOGIN</button>
-        </LoginAndCartContainer>
+          <LoginAndCartContainer visible={sidebar}>
+            <div>
+              <IconContext.Provider
+                value={{
+                  color: "#FFFFFF",
+                  className: "global-class-name",
+                  size: "40px",
+                }}
+              >
+                <CartContainer onClick={() => navigate("/carrinho")}>
+                  <IoCartOutline />
+                  <CartNumber>{cartItens.length}</CartNumber>
+                </CartContainer>
+              </IconContext.Provider>
+            </div>
+          </LoginAndCartContainer>
+        </CloseButton>
         <PageLinks>
           <span onClick={() => navigate("/sobrenos")}>Sobre Nós</span>
           <span onClick={() => navigate("/contato")}>Contato</span>
@@ -111,7 +124,11 @@ export default function MobileHeader() {
               }}
             >
               <div>
-                <IoChevronForwardSharp />
+                {showCategoriesList ? (
+                  <IoChevronDownSharp />
+                ) : (
+                  <IoChevronForwardSharp />
+                )}
               </div>
             </IconContext.Provider>
             <span>Categorias</span>
@@ -193,27 +210,14 @@ const CloseButton = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-around;
 `;
 
 const LoginAndCartContainer = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
-  button {
-    background-color: #ffffff;
-    width: 80px;
-    height: 40px;
-    color: #0a100d;
-    border: none;
-    border-radius: 20px;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 700;
-  }
 `;
 
 const CartContainer = styled.div`
@@ -265,10 +269,9 @@ const CategoriesList = styled.div`
   flex-direction: column !important;
   justify-content: flex-start;
   align-items: flex-start !important;
-
   span {
     font-family: Roboto;
-    font-size: 15px;
     line-height: 25px;
+    font-size: ${(props) => (props.show === true ? "15px" : "0px")} !important;
   }
 `;
