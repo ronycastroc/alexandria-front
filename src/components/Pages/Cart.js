@@ -6,6 +6,7 @@ import BookCart from "../BookCart";
 import Footer from "../Footer";
 import Header from "../Header";
 import { IoArrowUndo } from "react-icons/io5";
+import MobileHeader from "../MobileHeader";
 
 export default function Cart() {
     const { cartItens, setCartItens } = useContext(UserContext);
@@ -34,6 +35,7 @@ export default function Cart() {
     return (
         <>
             <Header />
+            <MobileHeader/>
 
             <Wrapper>
                 <Infos>
