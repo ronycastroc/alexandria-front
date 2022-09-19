@@ -157,7 +157,7 @@ const Wrapper = styled.div`
     display: none;
   }
   background-color: #0a100d;
-  height: 80px;
+  min-height: 80px;
   width: 100%;
   display: flex;
   flex: 0 0;
