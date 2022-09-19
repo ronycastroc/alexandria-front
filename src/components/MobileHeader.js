@@ -138,7 +138,7 @@ export default function MobileHeader() {
               Fantasia
             </span>
             <span onClick={() => navigate("/categorias/Terror")}>Terror</span>
-            <span onClick={() => navigate("/categorias/Auto-ajuda")}>
+            <span onClick={() => navigate("/categorias/Auto-Ajuda")}>
               Auto Ajuda
             </span>
             <span onClick={() => navigate("/categorias/Ficção-Cientifica")}>
