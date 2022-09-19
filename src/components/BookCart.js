@@ -17,7 +17,6 @@ export default function Book({ cover, price, title, quantity, id, setCartItens }
     }
 
     function minusBook() { 
-
         localCartItens.forEach(value => {
             if(value._id === id) {
               value.quantity -= 1;
@@ -122,6 +121,6 @@ const PlusMinus = styled.div`
     cursor: pointer;
 
     div {
-        font-size: 15px;
+        font-size: 18px;
     }
 `;

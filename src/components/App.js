@@ -11,6 +11,7 @@ import { useState } from "react";
 import AboutUs from "./Pages/AboutUs";
 import ContactsPage from "./Pages/ContactPage";
 import CategoriesPage from "./Pages/CategoriesPage";
+import Sucess from "./Pages/Sucess";
 import MobileHeader from "./MobileHeader";
 
 export default function App() {
@@ -31,9 +32,14 @@ export default function App() {
             <Route path="/categorias/:categoria" element={<CategoriesPage />} />
             <Route path="/contato" element={<ContactsPage />} />
             <Route path="/checkout" element={<CheckOut />}/>
+            <Route path="/sucess" element={<Sucess />}/>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
     </>
   );
 }
+
+setInterval(() => {
+  localStorage.removeItem('token');
+}, 1800000);

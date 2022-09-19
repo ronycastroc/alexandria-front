@@ -1,6 +1,6 @@
 import axios from "axios";
 
-//const BASE_URL = "http://localhost:5000";
+/* const BASE_URL = "http://localhost:5000"; */
 
 const BASE_URL = "https://alexandria-back.herokuapp.com";
 
@@ -9,7 +9,7 @@ function createHeaders() {
 
   const config = {
     headers: {
-      Authorization: `Bear ${auth}`,
+      Authorization: `Bearer ${auth}`,
     },
   };
 
@@ -41,4 +41,10 @@ function getProductWithCategory(category) {
   return promise;
 }
 
-export { postSignUp, postSignIn, getProductsFromAPI, getProductWithID, getProductWithCategory };
+function postCheckOut(body) {
+  const config = createHeaders();
+  const promise = axios.post(`${BASE_URL}/checkout`, body, config);
+  return promise;
+}
+
+export { postSignUp, postSignIn, getProductsFromAPI, getProductWithID, getProductWithCategory, postCheckOut };
