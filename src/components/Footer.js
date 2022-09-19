@@ -102,7 +102,7 @@ export default function Footer() {
             <p>Romance</p>
           </div>
         </Link>
-        <Link to="/categorias/Auto-Ajuda">
+        <Link to="/categorias/Auto-ajuda">
           <div>
             <p>Auto-ajuda</p>
           </div>
