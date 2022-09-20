@@ -96,13 +96,14 @@ const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
   background-image: linear-gradient(to top, #b6322e, #a22c29, #79211f);
+  border-radius: 5px;
   padding: 30px 0;
-  margin-top: 150px;
+  margin-top: 130px;
   margin-bottom: 50px;
   box-shadow: 0px 2px 47px 5px rgba(0, 0, 0, 0.5);
   @media (max-width: 650px) {
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 130px;
     align-items: center;
     justify-content: center;
   }

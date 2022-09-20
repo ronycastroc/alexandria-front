@@ -104,6 +104,9 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
   @media (max-width: 651px) {
     display: none;
@@ -112,18 +115,16 @@ const Wrapper = styled.div`
 
 const Categories = styled.div`
   width: 70%;
-  height: ${(props) => (props.categoriesBar === false ? "0px" : "40px")};
-  opacity: ${(props) => (props.categoriesBar === false ? 0 : 1)};
-  transition: all 0.3s ease;
+  height: ${(props) => (props.categoriesBar === false ? "0px" : "40px")};  
+  transition: height 0.3s ease-out;  
   background-color: #0a100d;
   position: absolute;
   top: 80px;
   left: 50%;
   transform: translate(-50%, 0%);
-  border-bottom-left-radius: 1000px;
-  border-bottom-right-radius: 1000px;
-  background-image: linear-gradient(to bottom, #0a100d, #d6d5c9);
-  box-shadow: 0px 3px 10px #0a100d;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-image: linear-gradient(to right, #0a100d 50%, #d6d5c9);
 
   div {
     width: 100%;
@@ -133,8 +134,10 @@ const Categories = styled.div`
     align-items: center;
   }
   span {
-    color: #0a100d;
+    color: #ffffff;
     font-weight: 600;
+    opacity: ${(props) => (props.categoriesBar === false ? 0 : 1)};
+    transition: all 0.1s ease-out;
   }
 
   a {

@@ -96,7 +96,7 @@ const BooksContainer = styled.div`
   display: flex;
   overflow-y: hidden;
   white-space: nowrap;
-  column-gap: 20px;
+  column-gap: 25px;
   scroll-behavior: smooth;
   ::-webkit-scrollbar {
     display: none;
@@ -104,7 +104,7 @@ const BooksContainer = styled.div`
 `;
 
 const CarouselButton = styled.div`
-  width: 100px;
+  width:55px;
   height: 50px;
   display: flex;
   align-items: center;

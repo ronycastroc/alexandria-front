@@ -59,14 +59,14 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   width: 100%;
-  margin-top: 150px;
-  margin-bottom: 100px;
+  margin-top: 140px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   @media (max-width: 650px) {
-    margin-top: 50px;
+    margin-top: 120px;
   }
   h1 {
     font-size: 30px;

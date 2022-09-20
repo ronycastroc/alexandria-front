@@ -78,6 +78,7 @@ const BookBox = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.2);
 
     img {
         width: 100%;

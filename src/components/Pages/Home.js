@@ -13,7 +13,6 @@ export default function Home() {
     getProductsFromAPI()
       .then((res) => {
         setProducts(res.data);
-        console.log(res.data)
       })
       .catch((err) => {
         console.error(err.message);
@@ -46,7 +45,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   width: 100%;
-  margin-top: 100px;
+  margin-top: 140px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -57,6 +56,6 @@ const Container = styled.div`
     margin-bottom: 30px;
   }
   @media (max-width: 650px) {
-    margin-top: 50px;
+    margin-top: 130px;
   }
 `;
