@@ -100,8 +100,8 @@ const Carousel = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 80px;
-  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-top: 20px;  
 `;
 
 const BooksContainer = styled.div`
@@ -111,11 +111,14 @@ const BooksContainer = styled.div`
   overflow-y: hidden;
   white-space: nowrap;
   scroll-behavior: smooth;
+  
   > div {
     display: inline-block;
     margin-right: 20px;
     width: 200px;
     height: 300px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     padding: 10px;
     background-color: #ffffff;

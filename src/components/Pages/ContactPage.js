@@ -138,8 +138,8 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 150px;
-  margin-bottom: 100px;
+  margin-top: 130px;
+  margin-bottom: 50px;
   background-color: #b9baa3;
   box-shadow: 0px 2px 10px 5px rgb(0 0 0 / 20%);
   border-radius: 5px;
@@ -152,7 +152,7 @@ const Container = styled.div`
 
   @media (max-width: 650px) {
     margin-bottom: 0px;
-    margin-top: 70px;
+    margin-top: 140px;
     width: 300px;
   }
 `;
@@ -182,6 +182,7 @@ const FormContainer = styled.div`
       font-size: 15px;
       border: 1px solid #b9baa3;
       color: #0a100d;
+      border-radius: 5px;
       @media (max-width: 650px) {
         margin-bottom: 0px;
         width: 250px;
@@ -208,6 +209,7 @@ const SmallInputHolder = styled.div`
     border: 1px solid #b9baa3;
     height: 50px;
     color: #0a100d;
+    border-radius: 5px;
     @media (max-width: 650px) {
       margin-bottom: 0px;
       width: 250px !important;

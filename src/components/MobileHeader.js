@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import UserContext from "../context/UserContext";
 import {
@@ -160,13 +160,16 @@ const Wrapper = styled.div`
   min-height: 80px;
   width: 100%;
   display: flex;
-  flex: 0 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  z-index: 0;
+  z-index: 1;
   opacity: ${(props) => (props.visible === true ? "0.5" : "1")}; ;
+  transition: all 0.5s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
 `;
 
 const NameContainer = styled.div`
@@ -192,17 +195,19 @@ const NameContainer = styled.div`
 
 const SideBar = styled.div`
   width: 250px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #0a100d;
   position: absolute;
   top: 0;
   right: 0;
+  position: fixed;
+  transform: ${(props) => (props.visible === true ? "translateX(0)" : "translateX(250px)")}; 
+  transition: all 0.5s ease-out;
   z-index: 1;
   display: flex;
   flex-direction: column;
   color: #ffffff;
   padding: 30px;
-  display: ${(props) => (props.visible === true ? "initial" : "none")}; ;
 `;
 
 const CloseButton = styled.div`
@@ -269,6 +274,7 @@ const CategoriesList = styled.div`
   flex-direction: column !important;
   justify-content: flex-start;
   align-items: flex-start !important;
+
   span {
     font-family: Roboto;
     line-height: 25px;

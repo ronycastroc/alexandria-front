@@ -52,7 +52,6 @@ export default function AboutUs() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,19 +59,16 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.div`
-  flex: 1;
-  overflow: hidden;
   display: flex;
   width: 100%;
 `;
 
 const Container = styled.div`
-  flex: 1 1;
   width: 100%;
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
 
   > h1 {
     font-size: 30px;
@@ -86,8 +82,9 @@ const Container = styled.div`
     width: 700px;
     background-color: #ffffff;
     padding: 20px;
-    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.2);
     margin: 30px 0;
+    border-radius: 5px;
     h1 {
       font-size: 30px;
       font-weight: 700;
@@ -116,8 +113,9 @@ const Container = styled.div`
       width: 350px;
       background-color: #ffffff;
       padding: 20px;
-      box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+      box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.2);
       margin: 30px 0;
+      
     }
     p {
       line-height: 25px;

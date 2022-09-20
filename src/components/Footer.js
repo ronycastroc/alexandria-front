@@ -151,7 +151,8 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   box-shadow: 0px -2px 4px rgb(0 0 0 / 15%);
-  @media (max-width: 651px) {
+  padding-bottom: 20px;
+  @media (max-width: 650px) {
     display: none;
   }
 `;

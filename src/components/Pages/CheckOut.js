@@ -342,7 +342,7 @@ const Wrapper = styled.div`
   border-radius: 5px;
   box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 130px;
   margin-bottom: 60px;
   position: relative;
 

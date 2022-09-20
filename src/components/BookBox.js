@@ -26,6 +26,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  box-shadow: 4px 4px 6px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
   cursor: pointer;
   img {
     width: 100%;
